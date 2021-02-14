@@ -91,8 +91,28 @@ const createSlider = () => {
   
   // input positive negative solved
   const duration = document.getElementById('duration').value || 1000;
+
+
   const durationWork = duration < 1 ? 1000 : duration * 500 && 1000;
-//   console.log(duration);
+//   console.log(durationWork);
+
+if(duration > 0){
+  sliders.forEach(slide => {
+    let item = document.createElement('div')
+    item.className = "slider-item";
+    item.innerHTML = `<img class="w-100"
+    src="${slide}"
+    alt="">`;
+    sliderContainer.appendChild(item)
+  })
+  changeSlide(0)
+  timer = setInterval(function () {
+    slideIndex++;
+    changeSlide(slideIndex);
+  }, duration);
+}
+
+else if(duration < 0){
   sliders.forEach(slide => {
     let item = document.createElement('div')
     item.className = "slider-item";
@@ -106,6 +126,8 @@ const createSlider = () => {
     slideIndex++;
     changeSlide(slideIndex);
   }, durationWork);
+}
+
 }
 
 // change slider index 
