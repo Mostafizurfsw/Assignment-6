@@ -88,8 +88,10 @@ const createSlider = () => {
   document.querySelector('.main').style.display = 'block';
   // hide image aria
   imagesArea.classList.add('d-none');
+  
+  // input positive negative solved
   const duration = document.getElementById('duration').value || 1000;
-  const durationWork = duration < 1 ? 1000 : duration * 500;
+  const durationWork = duration < 1 ? 1000 : duration * 500 && 1000;
 //   console.log(duration);
   sliders.forEach(slide => {
     let item = document.createElement('div')
