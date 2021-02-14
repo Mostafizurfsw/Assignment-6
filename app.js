@@ -93,7 +93,7 @@ const createSlider = () => {
   const duration = document.getElementById('duration').value || 1000;
 
 
-  const durationWork = duration < 1 ? 1000 : duration * 500 && 1000;
+  const durationWork = duration < 1 ? 1000 : duration * 500;
 //   console.log(durationWork);
 
 if(duration > 0){
