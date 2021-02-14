@@ -169,3 +169,4 @@ EnterBtn.addEventListener('keypress', function (event) {
       searchAlbum();
     }
   })
+
